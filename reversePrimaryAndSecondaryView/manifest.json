@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Youtube View Switch",
+  "description": "Switch Youtube Video and Sidebar location",
+  "version": "1.0.0",
+  "action": {
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    },
+    "default_title": "Click to switch",
+    "default_popup": "popup.html"
+  },
+  "permissions": ["activeTab", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/watch?*"],
+      "js": ["execute.js"]
+    }
+  ]
+}
