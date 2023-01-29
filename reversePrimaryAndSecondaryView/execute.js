@@ -1,5 +1,4 @@
-
-function viewSwitcher(message) {
+function viewSwitcher() {
   const primary = document.getElementById("primary").parentNode;
   reverseChildren(primary);
 }
@@ -11,11 +10,7 @@ function reverseChildren(parent) {
 }
 
 const onMessage = (message) => {
-  switch (message.actions) {
-    case "REVERSE":
-      viewSwitcher("REVERSE");
-      break;
-  }
+  viewSwitcher();
 };
 
 chrome.runtime.onMessage.addListener(onMessage);

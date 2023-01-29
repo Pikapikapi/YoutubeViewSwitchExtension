@@ -8,8 +8,6 @@ let getSelectedTab = (tabs) => {
         //fine
       }
     });
-  document
-    .getElementById("reverse")
-    .addEventListener("click", () => sendMsg({ actions: "REVERSE" }));
+  document.getElementById("reverse").addEventListener("click", () => sendMsg());
 };
 chrome.tabs.query({ url: ["https://www.youtube.com/watch?*"] }, getSelectedTab);
